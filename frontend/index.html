@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Filmes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🎬 Sistema de Filmes</h1>
+
+     <section>
+     <h1>Cadastro de Filmes</h1>
+    <input type="text" id="titulo" placeholder="Título do filme">
+
+    <select id="genero">
+    <option value="">Selecione um gênero</option>
+    <option value="Ação">Ação</option>
+    <option value="Aventura">Aventura</option>
+    <option value="Animação">Animação</option>
+    <option value="Comédia">Comédia</option>
+    <option value="Comédia Romântica">Comédia Romântica</option>
+    <option value="Drama">Drama</option>
+    <option value="Fantasia">Fantasia</option>
+     <option value="Crime">Crime</option>
+    <option value="Ficção Científica">Ficção Científica</option>
+    <option value="Musical">Musical</option>
+    <option value="Romance">Romance</option>
+    <option value="Suspense">Suspense</option>
+    <option value="Terror">Terror</option>
+    <option value="Infantil">Infantil</option>
+    <option value="Documentário">Documentário</option>
+</select>
+
+    <input type="number" id="ano" placeholder="Ano de lançamento"><br><br>
+
+    <button onclick="cadastrarFilme()">
+        Cadastrar Filme
+    </button>
+    </section>
+
+    <section>
+        <h2>Filmes cadastrados</h2>
+
+        <button onclick="buscarFilmes()">Ver filmes</button>
+
+        <div id="listaFilmes"></div>
+    </section>
+
+    <section>
+
+        <h2>Avaliar filme⭐</h2>
+
+ <select id="filme_id">
+    <option>Carregando filmes...</option>
+</select>
+<br>
+<br>
+
+<input type="radio" name="nota" value="1"> ⭐
+<input type="radio" name="nota" value="2"> ⭐⭐
+<input type="radio" name="nota" value="3"> ⭐⭐⭐
+<input type="radio" name="nota" value="4"> ⭐⭐⭐⭐
+<input type="radio" name="nota" value="5"> ⭐⭐⭐⭐⭐
+<br>
+<br>
+    
+
+        <button onclick="avaliarFilme()">
+            Enviar avaliação
+        </button>
+
+    </section>
+
+
+    <section>
+
+        <h2>Ranking</h2>
+
+        <button onclick="buscarRanking()">
+            Ver ranking
+        </button>
+
+        <button onclick="limparRanking()">
+            Limpar ranking
+        </button>
+
+        <div id="ranking"></div>
+
+    </section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
